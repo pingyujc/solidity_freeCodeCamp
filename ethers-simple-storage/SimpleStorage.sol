@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract SimpleStorage{
+contract SimpleStorage {
     uint256 public favoriteNumber;
 
     // map a name to their favorite number
@@ -17,11 +17,11 @@ contract SimpleStorage{
     People[] public people;
 
     // set the favorite number to the number we want
-    function store(uint256 _favoriteNumber) public virtual{
+    function store(uint256 _favoriteNumber) public virtual {
         favoriteNumber = _favoriteNumber;
     }
 
-    function retrieve() public view returns(uint256){
+    function retrieve() public view returns (uint256) {
         return favoriteNumber;
     }
 
@@ -29,6 +29,4 @@ contract SimpleStorage{
         people.push(People(_favoriteNumber, _name));
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
-
-
 }
