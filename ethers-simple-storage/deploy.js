@@ -3,7 +3,7 @@
 // use async function so that we can wait for the contract to be deployed first before moving on
 
 async function main() {
-  console.log("Hello");
+  console.log("Hello yoo");
 }
 
 main()
