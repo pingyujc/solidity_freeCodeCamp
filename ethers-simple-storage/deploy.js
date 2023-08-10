@@ -2,6 +2,8 @@
 
 // use async function so that we can wait for the contract to be deployed first before moving on
 
+// ganache fake blockchain
+// http://127.0.0.1:7545
 async function main() {
   console.log("Hello yoo");
 }
