@@ -3,7 +3,7 @@
 // use async function so that we can wait for the contract to be deployed first before moving on
 
 const ethers = require("ethers");
-const fs = require("fs"); // use this to read Abi and Bin
+const fs = require("fs-extra"); // use this to read Abi and Bin
 
 async function main() {
   // ganache fake blockchain
@@ -31,7 +31,7 @@ async function main() {
   console.log("Deploying...");
 
   // setting a manual gas limit
-  let gasLimit = 3000000;
+  let gasLimit = 300000000; // 2 extra zeroes
   const contract = await contractFactory.deploy();
   // STOP here and wait for the contract to be deploy
   console.log("DONE");
